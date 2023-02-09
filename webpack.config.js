@@ -3,6 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  entry: path.join(__dirname, 'src', 'index.js'),
+    output: {
+      path: path.join(__dirname, 'dist'),
+      assetModuleFilename: path.join('img', '[name].[contenthash][ext]'),
+    },
     module: {
       rules: [
         {
